@@ -47,7 +47,9 @@ export async function loadDefaultCsv() {
   try {
     setStatus(`正在从项目根目录读取 ${DEFAULT_CSV_FILE_NAME}……`);
 
-    const response = await fetch(`/${DEFAULT_CSV_FILE_NAME}`);
+    // 使用 import.meta.env.BASE_URL 动态获取当前项目的基准根路径
+    const response = await fetch(`${import.meta.env.BASE_URL}${DEFAULT_CSV_FILE_NAME}`);
+
 
     if (!response.ok) {
       throw new Error(
