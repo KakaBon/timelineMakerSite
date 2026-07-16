@@ -1,0 +1,27 @@
+export const elements = {
+  topContainer: document.getElementById("timeline-top"),
+  bottomContainer: document.getElementById("timeline-bottom"),
+  fileInput: document.getElementById("csv-file-input"),
+  importCsvButton: document.getElementById("import-csv-btn"),
+  loadDefaultButton: document.getElementById("load-default-button"),
+  resetViewButton: document.getElementById("reset-view-button"),
+  statusMessage: document.getElementById("status-message"),
+  csvLiveEditor: document.getElementById("csv-live-editor"),
+  applyChangesButton: document.getElementById("apply-changes-btn"),
+  downloadCsvButton: document.getElementById("download-csv-btn"),
+
+  timelineSearchInput: document.getElementById("timeline-search-input"),
+  timelineSearchRun: document.getElementById("timeline-search-run"),
+  timelineSearchPrevious: document.getElementById("timeline-search-prev"),
+  timelineSearchNext: document.getElementById("timeline-search-next"),
+  timelineSearchCounter: document.getElementById("timeline-search-counter"),
+
+  textSearchInput: document.getElementById("text-search-input"),
+  textSearchRun: document.getElementById("text-search-run"),
+  textSearchPrevious: document.getElementById("text-search-prev"),
+  textSearchNext: document.getElementById("text-search-next"),
+  textSearchCounter: document.getElementById("text-search-counter"),
+  textReplaceInput: document.getElementById("text-replace-input"),
+  replaceCurrentButton: document.getElementById("replace-current-button"),
+  replaceAllButton: document.getElementById("replace-all-button"),
+};

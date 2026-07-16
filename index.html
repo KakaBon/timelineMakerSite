@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>时间轴制作沙盒</title>
+  </head>
+
+  <body>
+    <div class="page">
+      <h1>时间轴制作沙盒</h1>
+
+      <div class="toolbar">
+        <button id="import-csv-btn" class="main-btn" type="button">
+          导入外部 CSV
+        </button>
+
+        <input
+          id="csv-file-input"
+          type="file"
+          accept=".csv,text/csv"
+          hidden
+        />
+
+        <button id="load-default-button" type="button">
+          恢复默认测试数据
+        </button>
+
+        <button id="reset-view-button" type="button">
+          重置视图
+        </button>
+
+        <div class="timeline-search">
+          <input
+            id="timeline-search-input"
+            type="search"
+            placeholder="搜索时间轴事件"
+            autocomplete="off"
+          />
+
+          <button id="timeline-search-run" class="search-action-btn" type="button">
+            查找
+          </button>
+
+          <button
+            id="timeline-search-prev"
+            class="compact-btn"
+            type="button"
+            title="上一个匹配结果"
+          >
+            ↑
+          </button>
+
+          <button
+            id="timeline-search-next"
+            class="compact-btn"
+            type="button"
+            title="下一个匹配结果"
+          >
+            ↓
+          </button>
+
+          <span id="timeline-search-counter" class="search-counter">
+            0 / 0
+          </span>
+        </div>
+
+        <span id="status-message">
+          正在载入系统底盘...
+        </span>
+      </div>
+
+      <div class="live-editor-section">
+        <div class="editor-header">
+          <label for="csv-live-editor" class="editor-label">
+            实时 CSV 数据编辑区
+          </label>
+
+          <div class="editor-actions">
+            <button
+              id="apply-changes-btn"
+              class="action-btn apply-btn"
+              type="button"
+            >
+              ✔ 应用修改
+            </button>
+
+            <button
+              id="download-csv-btn"
+              class="action-btn download-btn"
+              type="button"
+            >
+              导出 CSV 副本
+            </button>
+          </div>
+        </div>
+
+        <div class="text-search-panel">
+          <input
+            id="text-search-input"
+            type="search"
+            placeholder="在 CSV 文本中查找"
+            autocomplete="off"
+          />
+
+          <button id="text-search-run" class="search-action-btn" type="button">
+            查找
+          </button>
+
+          <button
+            id="text-search-prev"
+            class="compact-btn"
+            type="button"
+            title="上一个匹配结果"
+          >
+            ↑
+          </button>
+
+          <button
+            id="text-search-next"
+            class="compact-btn"
+            type="button"
+            title="下一个匹配结果"
+          >
+            ↓
+          </button>
+
+          <span id="text-search-counter" class="search-counter">
+            0 / 0
+          </span>
+
+          <input
+            id="text-replace-input"
+            type="search"
+            placeholder="替换为"
+            autocomplete="off"
+          />
+
+          <button
+            id="replace-current-button"
+            class="text-action-btn"
+            type="button"
+          >
+            替换
+          </button>
+
+          <button
+            id="replace-all-button"
+            class="text-action-btn"
+            type="button"
+          >
+            全部替换
+          </button>
+        </div>
+
+        <textarea
+          id="csv-live-editor"
+          placeholder="正在从本地 test-data.csv 载入原始数据..."
+        ></textarea>
+      </div>
+
+      <div class="timeline-section">
+        <h2>轴1 (Side: top)</h2>
+        <div id="timeline-top"></div>
+
+        <div class="middle-label">
+          <span>时间</span>
+        </div>
+
+        <h2>轴2 (Side: bottom)</h2>
+        <div id="timeline-bottom"></div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
