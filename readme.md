@@ -50,6 +50,7 @@ title,side,date,group
 1,top,2014-04-25,B
 ```
 
+
 ## 截图
 
 ![网页版时间轴制作工具上部功能区](./public/images/网页版时间轴制作工具上部功能区.png)
@@ -61,12 +62,18 @@ title,side,date,group
 
 ## Acknowledgements
 
-This project is built upon several open-source projects.
+This project uses the following open-source projects:
 
-- vis-timeline
+- vis-timeline (Apache-2.0 OR MIT)
   https://github.com/visjs/vis-timeline
 
-- Vite
-  https://vite.dev/
+- Vite (MIT)
+  https://github.com/vitejs/vite
 
-Please refer to the original repositories for license information.
+The respective projects remain subject to their own licenses.
+
+
+## License
+
+This project is licensed under the MIT License.
+See the LICENSE file for details.
