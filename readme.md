@@ -44,7 +44,8 @@ date,title,category,side,note,platform,source,author
 ```csv
 date,title,side,note,platform,source,author,category
 2014-04-25,1,top,NOTE1,aaaaaa,c,b,B
-
+```
+```csv
 title,side,date,group
 1,top,2014-04-25,B
 ```
